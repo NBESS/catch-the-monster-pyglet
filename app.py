@@ -86,7 +86,13 @@ def update(dt):
             # Add a new monster
             new_goblin = monster.Monster(x=randint(0, WIDTH), y=randint(0, HEIGHT), batch=main_batch)
             game_objects.append(new_goblin)
-
+        
+        # When the score reaches 100, end game, display a "You Won" message, and play win "sound effect"
+        if score == 100:
+            game_over()
+            score_label.text = f'You Won!'
+            win_sound_effect = pyglet.media.load('./resources/win.wav', streaming=False)
+            win_sound_effect.play()
 
 if __name__ == "__main__":
     # Update the game 120 times per second
