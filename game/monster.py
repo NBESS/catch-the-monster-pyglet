@@ -31,14 +31,14 @@ class Monster(physicalobject.PhysicalObject):
         self.velocity_x = randint(100, 300)
         self.velocity_y = randint(100, 300)
         
-        # This expression means: there is a 50%
+        # This expression means: there is a 20%
         # chance we will change our horizontal direction.
-        if randint(0, 100) > 50:
+        if randint(0, 100) > 80:
             self.velocity_x *= -1
             
-        # This expression means: there is a 50%
+        # This expression means: there is a 20%
         # chance we will change our vertical direction.
-        if randint(0, 100) > 50:
+        if randint(0, 100) > 80:
             self.velocity_y *= -1        
 
     def delete(self):
