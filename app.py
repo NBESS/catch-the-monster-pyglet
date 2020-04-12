@@ -16,7 +16,7 @@ music = pyglet.media.Player()
 music.queue(theme_song)
 
 # Set up the two top labels
-score_label = pyglet.text.Label(text="Caught 0", x=225, y=435, batch=main_batch)
+score_label = pyglet.text.Label(text="Caught 0", color=[255, 255, 10, 75], font_size=40, italic= True, bold= True, x=120, y=335, batch=main_batch)
 
 # Initialize the player sprite
 hero = player.Player(x=400, y=300, batch=main_batch)
